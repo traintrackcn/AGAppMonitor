@@ -9,12 +9,17 @@
 #import "AGModel.h"
 #import "NSObject+Singleton.h"
 
+
+@class AGRemoterResult;
+
+#define APP_MONITOR [DAAppMonitor singleton]
+
 @interface DAAppMonitor : AGModel
 
 #pragma mark - flurry stuff
 - (void)enableWithFlurryAPIKey:(NSString *)key flurryCrashReporter:(BOOL)flurryCrashReporter;
-- (void)flurryLogEvent:(NSString *)event;
-
+- (void)logEvent:(NSString *)event;
+- (void)logRemoterResult:(AGRemoterResult *)result;
 - (NSArray *)logFileInfos;
 
 @end

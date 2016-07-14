@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AB9CDA11C4DE49500C0EB54 /* libFlurry_5.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB9CDA01C4DE49500C0EB54 /* libFlurry_5.3.0.a */; };
 		4AB9CDA61C4DE68000C0EB54 /* DAAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9CDA31C4DE68000C0EB54 /* DAAppMonitor.m */; };
 		4AB9CDA71C4DE68000C0EB54 /* DAXcodeLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9CDA51C4DE68000C0EB54 /* DAXcodeLoggerFormatter.m */; };
 		4AB9CDA91C4DE6F800C0EB54 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB9CDA81C4DE6F800C0EB54 /* CrashReporter.framework */; };
@@ -17,6 +16,7 @@
 		4AB9CDBB1C4DF7E000C0EB54 /* DAAppMonitorViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4AB9CDB41C4DE78200C0EB54 /* DAAppMonitorViewController.h */; };
 		4AB9CDBC1C4DF7E000C0EB54 /* DAAppMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4AB9CDA21C4DE68000C0EB54 /* DAAppMonitor.h */; };
 		4AB9CDC21C4E2AD700C0EB54 /* DAFileLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9CDC11C4E2AD700C0EB54 /* DAFileLoggerFormatter.m */; };
+		4AC586171D37350F00BAB32C /* libFlurry_7.6.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC586161D37350F00BAB32C /* libFlurry_7.6.6.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +35,6 @@
 
 /* Begin PBXFileReference section */
 		4AB9CD8E1C4DE34400C0EB54 /* libAGAppMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAGAppMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AB9CD9F1C4DE49500C0EB54 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		4AB9CDA01C4DE49500C0EB54 /* libFlurry_5.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.3.0.a; sourceTree = "<group>"; };
 		4AB9CDA21C4DE68000C0EB54 /* DAAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAppMonitor.h; sourceTree = "<group>"; };
 		4AB9CDA31C4DE68000C0EB54 /* DAAppMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAppMonitor.m; sourceTree = "<group>"; };
 		4AB9CDA41C4DE68000C0EB54 /* DAXcodeLoggerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAXcodeLoggerFormatter.h; sourceTree = "<group>"; };
@@ -50,6 +48,7 @@
 		4AB9CDB91C4DE7AE00C0EB54 /* DALogDetailTriggerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALogDetailTriggerCell.m; sourceTree = "<group>"; };
 		4AB9CDC01C4E2AD700C0EB54 /* DAFileLoggerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAFileLoggerFormatter.h; sourceTree = "<group>"; };
 		4AB9CDC11C4E2AD700C0EB54 /* DAFileLoggerFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAFileLoggerFormatter.m; sourceTree = "<group>"; };
+		4AC586161D37350F00BAB32C /* libFlurry_7.6.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.6.6.a; path = ../3rd/Flurry/libFlurry_7.6.6.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB9CDA11C4DE49500C0EB54 /* libFlurry_5.3.0.a in Frameworks */,
+				4AC586171D37350F00BAB32C /* libFlurry_7.6.6.a in Frameworks */,
 				4AB9CDA91C4DE6F800C0EB54 /* CrashReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +67,8 @@
 		4AB9CD851C4DE34400C0EB54 = {
 			isa = PBXGroup;
 			children = (
+				4AC586161D37350F00BAB32C /* libFlurry_7.6.6.a */,
 				4AB9CDA81C4DE6F800C0EB54 /* CrashReporter.framework */,
-				4AB9CD9E1C4DE49500C0EB54 /* Flurry */,
 				4AB9CD901C4DE34400C0EB54 /* AGAppMonitor */,
 				4AB9CD8F1C4DE34400C0EB54 /* Products */,
 			);
@@ -95,15 +94,6 @@
 				4AB9CDC11C4E2AD700C0EB54 /* DAFileLoggerFormatter.m */,
 			);
 			path = AGAppMonitor;
-			sourceTree = "<group>";
-		};
-		4AB9CD9E1C4DE49500C0EB54 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				4AB9CD9F1C4DE49500C0EB54 /* Flurry.h */,
-				4AB9CDA01C4DE49500C0EB54 /* libFlurry_5.3.0.a */,
-			);
-			path = Flurry;
 			sourceTree = "<group>";
 		};
 		4AB9CDB11C4DE78200C0EB54 /* ViewControllers */ = {
@@ -297,14 +287,15 @@
 					"\"../3rd/libOpen/include\"",
 					"\"../3rd/AGNetwork/include\"",
 					"\"../3rd/AGUIKit/include\"",
+					"\"../3rd/Flurry\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
-					../3rd/thirdPartyOpenResources,
-					"$(PROJECT_DIR)/Flurry",
+					"\"../3rd/thirdPartyOpenResources\"",
 					"\"../3rd/libOpen\"",
 					"\"../3rd/AGNetwork\"",
 					"\"../3rd/AGUIKit\"",
+					"\"../3rd/Flurry\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -312,6 +303,7 @@
 					"-l\"thirdPartyOpenResources\"",
 					"-l\"AGNetwork\"",
 					"-l\"libOpen\"",
+					"-l\"libFlurry_7.6.6\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -330,14 +322,15 @@
 					"\"../3rd/libOpen/include\"",
 					"\"../3rd/AGNetwork/include\"",
 					"\"../3rd/AGUIKit/include\"",
+					"\"../3rd/Flurry\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
-					../3rd/thirdPartyOpenResources,
-					"$(PROJECT_DIR)/Flurry",
+					"\"../3rd/thirdPartyOpenResources\"",
 					"\"../3rd/libOpen\"",
 					"\"../3rd/AGNetwork\"",
 					"\"../3rd/AGUIKit\"",
+					"\"../3rd/Flurry\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -345,6 +338,7 @@
 					"-l\"thirdPartyOpenResources\"",
 					"-l\"AGNetwork\"",
 					"-l\"libOpen\"",
+					"-l\"libFlurry_7.6.6\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -370,6 +364,7 @@
 				4AB9CD991C4DE34400C0EB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,10 @@
 #import <CrashReporter/CrashReporter.h>
 #import "Flurry.h"
 #import "DAFileLoggerFormatter.h"
+#import "AGRemoterResult.h"
+#import "DSRequestInfo.h"
+#import "AGRemoterError.h"
+#import "GlobalDefine.h"
 
 @interface DAAppMonitor(){
     
@@ -47,14 +51,26 @@
     }
     
     if (key) [Flurry startSession:key];
-    
 }
 
 
 #pragma mark - flurry tool stuff
 
-- (void)flurryLogEvent:(NSString *)event{
+- (void)logEvent:(NSString *)event{
     [Flurry logEvent:event];
+}
+
+- (void)logRemoterResult:(AGRemoterResult *)result{
+    if ([result isError] && ![result isCanceled] && ![result isInvalidConnection]){
+//        DSRequestInfo *request = (DSRequestInfo *)result.request;
+        AGRemoterError *errorParsed = result.errorParsed;
+        NSString *msg = [errorParsed.messages componentsJoinedByString:@" | "];
+        NSString *title = [NSString stringWithFormat:@"[%@(%@)]", result.type, @(result.code)];
+//        TLOG(@"[Response Error] %@ %@ %@", [request method], [request URL], result.errorParsed.recoverySuggestion);
+//        [self dispatchRemoterErrorOccured:result];
+        [Flurry logError:title message:msg error:result.errorOriginal];
+        TLOG(@"%@ %@", title, msg);
+    }
 }
 
 #pragma mark - crash reporter stuff
